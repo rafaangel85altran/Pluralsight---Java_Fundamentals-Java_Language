@@ -10,9 +10,9 @@ public class Main {
 		if (students > 0) {
 			if (rooms > 0)
 				System.out.println(students/rooms);
-		}
-		else 
-			System.out.println("No students");
+			}
+			else 
+				System.out.println("No students");
 				
 		
 		System.out.println();
