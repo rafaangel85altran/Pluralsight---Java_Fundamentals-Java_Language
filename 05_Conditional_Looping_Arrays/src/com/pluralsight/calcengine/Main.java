@@ -86,9 +86,12 @@ public class Main {
 				
 				result = operation1.divition(vals[0], vals[1]);
 				
-				representation1.printOp(vals[0], vals[1], result, opCode);
-				
-				break;
+				if (result != 0) {
+					representation1.printOp(vals[0], vals[1], result, opCode);
+					break;
+				}
+				else
+					break;
 			}
 		}
 		System.out.println("End of the program");
