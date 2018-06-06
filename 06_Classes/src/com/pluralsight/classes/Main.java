@@ -21,7 +21,7 @@ public class Main {
 		 * Method return values section
 		 * */
 		
-		Flight lax1 = new Flight();			// New instance lax1 of the class Flight (to Los Angeles) 
+		/*Flight lax1 = new Flight();			// New instance lax1 of the class Flight (to Los Angeles) 
 		Flight lax2 = new Flight();
 		
 		for (int i = 0; i < 50; i++)
@@ -41,7 +41,7 @@ public class Main {
 		
 		if (lax1.hasRoom(lax2));	// return true if lax1.passengers + lax2.passengers is < or = to seats
 			lax3 = lax1.createNewWithBoth(lax2); // if passengers in lax2 and lax1 flight are < or = to seats 
-												 // then create lax3 with passengers = addition of both
+												 // then create lax3 with passengers = addition of both*/
 		/*
 		 * Section null reference
 		 * 		If there wasn´t room to convine both, lax3 will be set to nothing 
@@ -51,10 +51,16 @@ public class Main {
 		 * 		objects that are a result from class methods 
 		 * */		
 		
-		if (lax3 != null) {
+		/*if (lax3 != null) {
 			lax3.printpassengers();
 			System.out.println("Flights combined");
-		}
+		}*/
+		
+		Flight slcToNyc = new Flight();
+		
+		slcToNyc.setSeats(150);						//Set seats to 150
+		
+		System.out.println(slcToNyc.getSeats());	//Access to slcToNyc.seats (a private field)
 		
 		System.out.println("** end of program **");
 	}

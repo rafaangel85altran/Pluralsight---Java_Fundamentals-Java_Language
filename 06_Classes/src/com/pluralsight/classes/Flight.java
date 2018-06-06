@@ -54,4 +54,20 @@ public class Flight {
 			return newFlight;
 		}
 		
+		/*
+		 * Accessors and Mutators Section
+		 * 		Accessors or getters retrieves a value
+		 * 
+		 * 		Mutators or setters modifies field value
+		 *
+		 * */
+		
+		public int getSeats() {
+			return seats;
+		}
+		
+		public void setSeats(int seats) {
+			this.seats = seats;
+		}
+		
 }
