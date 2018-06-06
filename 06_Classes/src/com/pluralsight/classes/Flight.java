@@ -10,6 +10,10 @@ public class Flight {
 			passengers = 0;	
 		}
 		
+		/*
+		 * Using Classes section
+		 * **/
+		
 		public void add1passenger() {	//Method of the class that can be used outside the class
 			if (passengers < seats)
 				passengers += 1;
@@ -24,4 +28,22 @@ public class Flight {
 		private void handleTooMany() {	//Method of the class that cannot be used outside the class
 			System.out.println("Too Many!");
 		}
+		
+		/*
+		 * Method return Values section
+		 * **/
+		
+		public boolean hasRoom (Flight f2) {
+			int total = passengers + f2.passengers;
+			return total <= seats;		// If total is < or Equal to seats true, else false 
+		}
+		
+		public Flight createNewWithBoth (Flight f2) {
+			Flight newFlight = new Flight();
+			newFlight.seats = seats;
+			newFlight.passengers = passengers + f2.passengers;
+			
+			return newFlight;
+		}
+		
 }
