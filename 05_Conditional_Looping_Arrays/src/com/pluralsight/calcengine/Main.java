@@ -93,6 +93,9 @@ public class Main {
 				else
 					break;
 			}
+			
+			default: 
+				System.out.println("This operand is not permitted");
 		}
 		System.out.println("End of the program");
 	}
