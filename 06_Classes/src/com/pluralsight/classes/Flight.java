@@ -35,13 +35,21 @@ public class Flight {
 		
 		public boolean hasRoom (Flight f2) {
 			int total = passengers + f2.passengers;
-			return total <= seats;		// If total is < or Equal to seats true, else false 
+			return (total <= seats);		// If total is < or Equal to seats true, else false 
 		}
 		
 		public Flight createNewWithBoth (Flight f2) {
 			Flight newFlight = new Flight();
 			newFlight.seats = seats;
-			newFlight.passengers = passengers + f2.passengers;
+			newFlight.passengers = this.passengers + f2.passengers;		// this here refers to the current object
+			
+			/*
+			 * Special references this:
+			 * 		since the method createNewWithBoth is called:
+			 * 			lax1.createNewWitBoth(lax2);
+			 * 				this.passengers is refering to the passengers of the object lax1
+			 * 					f2.passengers is refered to the passengers of the object f2
+			 * */
 			
 			return newFlight;
 		}
