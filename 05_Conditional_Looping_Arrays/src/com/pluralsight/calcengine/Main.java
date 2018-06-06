@@ -11,6 +11,11 @@ public class Main {
 		double val2 = 0;
 		double result = 0;
 		
+		/**Object operation class pointing at the class Operation
+		 * **/
+		Operation operation1 = new Operation();
+		Representation representation1 = new Representation();
+		
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.println("############## Welcome to the Calculator ##############");
@@ -22,19 +27,21 @@ public class Main {
 		System.out.println("############  enter the desired operator   ############");
 		
 		char opCode = keyboard.nextLine().charAt(0);
-		
+	
 		switch (opCode) {
 		
 			case '+':
 			{
+				
 				System.out.println("Type first operand");
 				vals[0] = keyboard.nextDouble();
 				
 				System.out.println("Type second operand");
 				vals[1] = keyboard.nextDouble();
 				
-				System.out.println("Result is");
-				System.out.println(vals[0] + vals[1]);
+				result = operation1.addition(vals[0], vals[1]);
+				
+				representation1.printOp(vals[0], vals[1], result, opCode);
 				
 				break;
 			}
@@ -42,13 +49,14 @@ public class Main {
 			case '-':
 			{
 				System.out.println("Type first operand");
-				val1 = keyboard.nextDouble();
+				vals[0] = keyboard.nextDouble();
 				
 				System.out.println("Type second operand");
-				val2 = keyboard.nextDouble();
+				vals[1] = keyboard.nextDouble();
 				
-				System.out.println("Result is");
-				System.out.println(val1 - val2);
+				result = operation1.substraction(vals[0], vals[1]);
+				
+				representation1.printOp(vals[0], vals[1], result, opCode);
 				
 				break;
 			}
@@ -56,13 +64,14 @@ public class Main {
 			case '*':
 			{
 				System.out.println("Type first operand");
-				val1 = keyboard.nextDouble();
+				vals[0] = keyboard.nextDouble();
 				
 				System.out.println("Type second operand");
-				val2 = keyboard.nextDouble();
+				vals[1] = keyboard.nextDouble();
 				
-				System.out.println("Result is");
-				System.out.println(val1 * val2);
+				result = operation1.multiplication(vals[0], vals[1]);
+				
+				representation1.printOp(vals[0], vals[1], result, opCode);
 				
 				break;
 			}
@@ -70,13 +79,14 @@ public class Main {
 			case '/':
 			{
 				System.out.println("Type first operand");
-				val1 = keyboard.nextDouble();
+				vals[0] = keyboard.nextDouble();
 				
 				System.out.println("Type second operand");
-				val2 = keyboard.nextDouble();
+				vals[1] = keyboard.nextDouble();
 				
-				System.out.println("Result is");
-				System.out.println(val1 / val2);
+				result = operation1.divition(vals[0], vals[1]);
+				
+				representation1.printOp(vals[0], vals[1], result, opCode);
 				
 				break;
 			}
